@@ -1,0 +1,10 @@
+{
+  "name": "airx-command-module",
+  "version": "1.0.0",
+  "description": "command module for kuka control system, task automation with robotics and machine learning",
+  "main": "public/electron.js",
+  "repository": "https://github.com/avisgyawali/airx-electron.git",
+  "author": "Avish Gyawali <avishgyawali@gmail.com>",
+  "license": "Commercial",
+  "private": true
+}
