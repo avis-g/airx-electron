@@ -1,40 +1,72 @@
-import React from "react";
-import { Link } from "react-router-dom";
-import logo from "./logo.svg";
-import "./App.css";
-import Layout from "./Layout";
+import React, { Component } from "react";
+import { HashRouter, Route, Switch } from "react-router-dom";
+import "./resources/scss/style.scss";
 
-const App = () => {
-  const homepage = () => {
+const loading = (
+  <div className="pt-3 text-center">
+    <div className="sk-spinner sk-spinner-pulse"></div>
+  </div>
+);
+
+// Containers
+const Layout = React.lazy(() => import("./components/Layout"));
+
+// Pages
+// const Login = React.lazy(() =>
+//   import("./components/contents/pages/login/Login")
+// );
+// const Register = React.lazy(() =>
+//   import("./components/contents/pages/register/Register")
+// );
+// const Page404 = React.lazy(() =>
+//   import("./components/contents/pages/page404/Page404")
+// );
+// const Page500 = React.lazy(() =>
+//   import("./components/contents/pages/page500/Page500")
+// );
+
+class App extends Component {
+  render() {
     return (
-      <div className="App">
-        <header className="App-header">
-          <p>React Electron Boilerplate</p>
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-          <Link className="App-link" to="/about">
-            Link to the About Page
-          </Link>
-        </header>
-      </div>
+      <HashRouter>
+        <React.Suspense fallback={loading}>
+          <Switch>
+            {/* <Route
+              exact
+              path="/login"
+              name="Login Page"
+              render={(props) => <Login {...props} />}
+            />
+            <Route
+              exact
+              path="/register"
+              name="Register Page"
+              render={(props) => <Register {...props} />}
+            />
+            <Route
+              exact
+              path="/404"
+              name="Page 404"
+              render={(props) => <Page404 {...props} />}
+            />
+            <Route
+              exact
+
+              
+              path="/500"
+              name="Page 500"
+              render={(props) => <Page500 {...props} />}
+            /> */}
+            <Route
+              path="/"
+              name="Home"
+              render={(props) => <Layout {...props} />}
+            />
+          </Switch>
+        </React.Suspense>
+      </HashRouter>
     );
-  };
-  return (
-    <>
-      <Layout />
-      {homepage()}
-    </>
-  );
-};
+  }
+}
 
 export default App;

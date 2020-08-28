@@ -1,0 +1,109 @@
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu+Condensed&family=Ubuntu+Mono:wght@400;700&family=Ubuntu:wght@300;400;500;700&display=swap");
+/*
+Ubuntu font-families, only 'Ubuntu' is used for airx
+font-family: 'Ubuntu', sans-serif;
+font-family: 'Ubuntu Condensed', sans-serif;
+font-family: 'Ubuntu Mono', monospace;
+*/
+* {
+  font-family: "Ubuntu", sans-serif;
+}
+
+.airx-color-primary {
+  background-color: #1a2035 !important;
+  color: dimgray !important;
+}
+.airx-color-secondary {
+  background-color: #1f283e !important;
+}
+.airx-borders-t-r {
+  border-top: 2px solid #323042 !important;
+  border-right: 2px solid #323042 !important;
+}
+.airx-borders-r {
+  border-right: 2px solid #323042 !important;
+}
+.airx-borders-b {
+  border-bottom: 1px solid dimgray !important;
+}
+.airx-height {
+  height: auto;
+  margin-top: -0.5rem !important;
+  margin-bottom: -0.4rem !important;
+  margin-left: -1.03rem !important;
+}
+.airx-drop-items {
+  color: #ced2d8 !important;
+}
+.divider {
+  margin-bottom: -0.5rem !important;
+}
+br {
+  content: "";
+  margin-bottom: 0.3rem !important;
+  background-color: #1a2035 !important;
+}
+//main panel
+.airx-panel-defaults-main {
+  background-color: #1a2035 !important;
+  border: 2px solid #323042 !important;
+  border-radius: 1rem !important;
+}
+.airx-panel-defaults-sub {
+  background-color: #1f283e !important;
+  color: #ced2d8 !important;
+  font-weight: 700;
+  border-top: none !important;
+  border-left: none !important;
+  border-right: none !important;
+  border-bottom: 1px solid #323042;
+  border-top-left-radius: 0.9rem !important;
+  border-top-right-radius: 0.9rem !important;
+}
+.ax-panel-tile-default {
+  background-color: #ced2d8 !important;
+  height: 20rem;
+}
+//console styles
+.ax-top-tiles {
+  background-color: #323042 !important;
+  color: #ced2d8 !important;
+}
+.ax-tiles-icon {
+  color: #ffffff !important;
+}
+.ax-right-end-align {
+  align-content: right !important;
+  text-align: right !important;
+  float: right;
+  overflow: hidden !important;
+  margin-top: 0.2rem !important;
+}
+.ax-console-tile {
+  background-color: #1f283e !important;
+  color: #ced2d8 !important;
+  font-weight: 700;
+  border-top: none !important;
+  border-left: none !important;
+  border-right: none !important;
+  border-bottom: 1px solid #323042;
+}
+.ax-tile-bg {
+  background-color: #dddddd !important;
+}
+.ax-tb-hdr {
+  background-color: #1f283e !important;
+  color: #ced2d8 !important;
+  font-weight: 700;
+  border-top: none !important;
+  border-left: none !important;
+  border-right: none !important;
+  border-bottom: 1px solid #323042;
+}
+.ax-tb-bdy {
+  color: #323042 !important;
+  background-color: #ced2d8 !important;
+}
+.ax-console-infocard {
+  font-size: small !important;
+}

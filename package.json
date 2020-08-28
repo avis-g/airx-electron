@@ -1,10 +1,65 @@
 {
   "name": "airx-command-module",
   "version": "1.0.0",
-  "description": "command module for kuka control system, task automation with robotics and machine learning",
+  "description": "Airx command module for commanding, configuring and deploying task automation application developed with  Kuka Control Systems, Artificial Intelligence and Machine Learning.",
   "main": "public/electron.js",
   "repository": "https://github.com/avisgyawali/airx-electron.git",
   "author": "Avish Gyawali <avishgyawali@gmail.com>",
-  "license": "Commercial",
-  "private": true
+  "license": "Commercial License, A closed source application and a property of Arrtsm GmbH.",
+  "private": true,
+  "homepage": "./",
+  "build": {
+    "appId": "module.command.airx"
+  },
+  "dependencies": {
+    "@coreui/chartjs": "^2.0.0",
+    "@coreui/coreui": "^3.2.2",
+    "@coreui/icons": "2.0.0-beta.4",
+    "@coreui/icons-react": "^1.0.1",
+    "@coreui/react": "^3.0.3",
+    "@coreui/react-chartjs": "^1.0.0",
+    "@coreui/utils": "^1.3.1",
+    "classnames": "^2.2.6",
+    "core-js": "^3.6.5",
+    "cross-env": "^7.0.2",
+    "electron-is-dev": "^1.2.0",
+    "node-sass": "^4.14.1",
+    "prop-types": "^15.7.2",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1",
+    "react-redux": "7.2.0",
+    "react-router-dom": "^5.2.0",
+    "redux": "4.0.5"
+  },
+  "devDependencies": {
+    "concurrently": "^5.3.0",
+    "electron": "^10.0.0",
+    "electron-builder": "^22.8.0",
+    "react-scripts": "^3.4.1",
+    "wait-on": "^5.2.0"
+  },
+  "scripts": {
+    "start-react": "react-scripts start",
+    "build-react": "react-scripts build",
+    "test-react": "react-scripts test --env=jsdom",
+    "eject-react": "react-scripts eject",
+    "build-electron": "electron-builder",
+    "build": "yarn build-react && yarn build-electron",
+    "start": "concurrently \"cross-env BROWSER=none yarn start-react\" \"wait-on http://localhost:3000 && electron .\""
+  },
+  "eslintConfig": {
+    "extends": "react-app"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  }
 }

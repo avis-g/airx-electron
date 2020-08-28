@@ -1,25 +1,18 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import "./index.css";
-import { HashRouter as Router, Route } from "react-router-dom";
-import Routes from "./Routes";
+import App from "./App";
 
-import Home from "./App";
-import About from "./pages/about";
+import store from "./resources/scripts/store";
+
+import { Provider } from "react-redux";
+
+import { freeSet } from "@coreui/icons";
+
+React.icons = freeSet;
 
 ReactDOM.render(
-  // <Router>
-  //     <div>
-  //         <main>
-  //             <Route exact path="/" component={Home} />
-  //             <Route path="/about" component={About} />
-  //         </main>
-  //     </div>
-  // </Router>,
-  // document.getElementById("root")
-
-  <React.StrictMode>
-    <Routes />
-  </React.StrictMode>,
+  <Provider store={store}>
+    <App />
+  </Provider>,
   document.getElementById("root")
 );

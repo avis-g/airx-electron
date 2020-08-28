@@ -2,9 +2,6 @@ const { app, BrowserWindow } = require("electron");
 const path = require("path");
 const isDevelopmentMode = require("electron-is-dev");
 
-// const inputMenu = require("electron-input-menu");
-// const context = require("electron-contextmenu-middleware");
-
 let controlModule;
 
 function createWindow() {
@@ -24,9 +21,6 @@ function createWindow() {
   //   controlModule.webContents.openDevTools();
 }
 app.whenReady().then(createWindow);
-
-// context.use(inputMenu);
-// context.activate();
 
 app.on("window-all-closed", () => {
   if (process.platform !== "darwin") app.quit();
